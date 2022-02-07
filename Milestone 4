@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	srand(50);
+
+	int n[40]; /*n is an array of 20 integers */
+	int i, j;
+
+	/* intialize elements of array n to 0 */
+	for (i = 0; i < 20; i++) {
+		n[i] = i + 100; /* set element at location i to i + 100 */
+	}
+
+	/* output each array element's value */
+	for (j = 0; j < 100; j++) {
+		printf("Element[%d] = %d\n", j, n[j]);
+	}
+
+	return 0;
+}
+
+struct Generator {
+	char random[50];
+	char number[50];
+	char pseudo[100];
+	int generator_id;
+} generate;
+union Number {
+	int i;
+	float f;
+	char str[50];
+} data;
